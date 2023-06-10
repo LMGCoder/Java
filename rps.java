@@ -15,7 +15,7 @@ class MyTest
 	  int ra = r.nextInt(2);
 	  String randChar = new String("RPS");
 	  
-	  cpu = (char)randChar[ra];
+	  cpu = randChar.charAt(ra);
 
 	  System.out.printf("You picked %c! CPU picked %c\n", choice, cpu);
 	  
