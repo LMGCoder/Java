@@ -6,12 +6,11 @@ class MyTest
 	public static void main(String args[])
 	{
 	  Random r = new Random();
-	  Scanner s = new Scanner(System.in);
 	  
 	  System.out.println("RPS");
  
 	  char choice = args[0].charAt(0);
-	  char cpu = 'P';
+	  char cpu = 'X';
 	  int ra = r.nextInt(3);
 	  String randChar = new String("RPS");
 	  
