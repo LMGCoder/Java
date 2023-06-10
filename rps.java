@@ -12,7 +12,7 @@ class MyTest
  
 	  char choice = args[0].charAt(0);
 	  char cpu = 'P';
-	  int ra = r.nextInt(2);
+	  int ra = r.nextInt(3);
 	  String randChar = new String("RPS");
 	  
 	  cpu = randChar.charAt(ra);
