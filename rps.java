@@ -27,11 +27,15 @@ class MyTest
 		  return;
 	  }
 	  
-	  System.out.println(winner + validator(cpu, choice));
+	  winner = validator(choice, cpu);
 	  
+	  System.out.printf("%s wins!", winner);
 	}
 	
-	public String validator(char cpu_choice, char humain_choice) {
+	public static String validator(char humain_choice, char cpu_choice) 
+	{
+		
+		String winner = new String("a");
 		
 		switch(humain_choice)
 		{
@@ -66,8 +70,6 @@ class MyTest
 				System.out.println("Hmm no good.");
 				break;			
 		  }
-
-		}
 	return winner;
 	}
-};
+}
