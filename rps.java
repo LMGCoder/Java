@@ -27,41 +27,47 @@ class MyTest
 		  return;
 	  }
 	  
-	  switch(choice)
-	  {
-		  case 'P':
-			if(cpu == 'R')
-				winner = "Human";
-			else if(cpu == 'S')
-				winner = "Computer";
-			else
-				System.out.println("Should never happpens.");
-			break;
-			
-		  case 'S':
-			if(cpu == 'R')
-				winner = "Computer";
-			else if(cpu == 'P')
-				winner = "Human";
-			else
-				System.out.println("404");
-			break;
-			
-			case 'R':
-				if(cpu == 'P')
+	  System.out.println(winner + validator(cpu, choice));
+	  
+	}
+	
+	public String validator(char cpu_choice, char humain_choice) {
+		
+		switch(humain_choice)
+		{
+			  case 'P':
+				if(cpu_choice == 'R')
+					winner = "Human";
+				else if(cpu_choice == 'S')
 					winner = "Computer";
-				else if(cpu == 'S')
+				else
+					System.out.println("Should never happpens.");
+				break;
+
+			  case 'S':
+				if(cpu_choice == 'R')
+					winner = "Computer";
+				else if(cpu_choice == 'P')
 					winner = "Human";
 				else
 					System.out.println("404");
-			break;
-			
+				break;
+
+			case 'R':
+				if(cpu_choice == 'P')
+					winner = "Computer";
+				else if(cpu_choice == 'S')
+					winner = "Human";
+				else
+					System.out.println("404");
+				break;
+
 			default:
 				System.out.println("Hmm no good.");
 				break;			
-	  }
-	  
-	  System.out.println(winner + " wins!");
-	  
+		  }
+
+		}
+	return winner;
 	}
 };
