@@ -5,9 +5,9 @@ class MyTest
 {
 	public static void main(String args[])
 	{
-	  if(args[0].equals("help"))
+	  if(args.length() != 2)
 	  {
-		  System.out.println("YUEAAAAH");
+		  System.out.println("java MyTest [R|P|S]");
 		  return;
 	  }
 	  Random r = new Random();
