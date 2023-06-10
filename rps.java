@@ -5,6 +5,11 @@ class MyTest
 {
 	public static void main(String args[])
 	{
+	  if(args[0].equals("help"))
+	  {
+		  System.out.println("YUEAAAAH");
+		  return;
+	  }
 	  Random r = new Random();
 	  
 	  System.out.println("RPS");
@@ -29,6 +34,7 @@ class MyTest
 	  winner = validator(choice, cpu);
 	  
 	  System.out.printf("%s wins!", winner);
+	  return;
 	}
 	
 	public static String validator(char humain_choice, char cpu_choice) 
